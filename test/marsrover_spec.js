@@ -167,5 +167,12 @@ describe('Mars Rover', function() {
       expect(mr.orientation).to.equal('S')
       expect(mr.location).to.deep.equal([1, 0]);
     });
+
+    it('should be able to take a very long string of commands', function() {
+      var mr = new MarsRover(3, 3, 'E', new Grid([5, 5]));
+      mr.move('MMRMMRMRRM')
+      expect(mr.orientation).to.equal('E')
+      expect(mr.location).to.deep.equal([5, 1]);
+    })
   });
 });
