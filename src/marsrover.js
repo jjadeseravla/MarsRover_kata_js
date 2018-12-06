@@ -55,6 +55,12 @@ function MarsRover(locationX, locationY, orientation, grid) {
     }
     this.orientation = compass[index]
   }
+
+  // MarsRover.prototype.getState = function() {
+  //   return {
+  //     location: this.location
+  //     orientation: this.orientation,
+  // }
 }
 
 module.exports = { MarsRover };
