@@ -17,10 +17,4 @@ Grid.prototype.getGridDim = function() {
   }
 }
 
-
-// Grid.prototype.getGridSize = function(xStartPoint, yStartPoint) {
-//   if (isNaN(xStartPoint) && isNaN(yStartPoint)) throw ('please enter two numbers');
-//   return this.gridSize = [xStartPoint, yStartPoint];
-// }
-
 module.exports = { Grid };

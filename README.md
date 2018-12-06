@@ -29,19 +29,19 @@ INPUT AND OUTPUT
 Test Input:
 
 ```
-5 5
+$ 5 5
 ```
 ```
-1 2 N
+$ 1 2 N
 ```
 ```
-LMLMLMLMM
+$ LMLMLMLMM
 ```
 
 Expected Output:
 
 ```
-1 3 N
+$ 1 3 N
 ```
 
 ## To Run:
@@ -49,8 +49,11 @@ Expected Output:
 $ yarn install
 ```
 
-To run the (failing) test:
+To run the tests:
 
 ```
 $ yarn test
 ```
+
+## Future Steps
+Provide a front-end interface for interaction as this currently only provides partial functionality as the project is build up from the inside out.

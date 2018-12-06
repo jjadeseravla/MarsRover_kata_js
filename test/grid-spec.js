@@ -1,7 +1,5 @@
 'use strict'
 
-// import Grid from '../grid'
-
 const chai = require('chai')
 const expect = chai.expect
 const { Grid } = require('../src/grid.js')
@@ -21,9 +19,6 @@ const { Grid } = require('../src/grid.js')
     });
 
     it('should set the coordinates for X and Y', function () {
-      //var grid = new grid([5,5])
-      //var grid = new grid();
-      //grid = new Grid();
       var grid = new Grid([5, 6]);
       grid.getGridDim()
       expect(grid.gridSize).to.deep.equal([5, 6]);
@@ -31,7 +26,6 @@ const { Grid } = require('../src/grid.js')
 
 
     it('should throw an error if there are not 2 coordinates that are numbers', function () {
-      //expect(function(){ grid.getGridSize(['boo', 9]) }).to.throw('please enter two numbers');
        expect(function() { new Grid([5, 'boo']) }).to.throw('please enter two numbers');
     });
 

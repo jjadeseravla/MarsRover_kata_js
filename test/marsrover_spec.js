@@ -52,7 +52,7 @@ describe('Mars Rover', function() {
   });
 
   describe('the state of the marsrover is stored', function() {
-    it('should know where it has moved', function() {
+    it('should be able to move more than one step', function() {
       var mr = new MarsRover(6, 6, 'N', new Grid([9, 9]));
       mr.move('MM')
       expect(mr.location).to.deep.equal([6, 8])
@@ -89,17 +89,14 @@ describe('Mars Rover', function() {
       grid = new Grid([5, 5])
     })
 
-    it('should be able to move and turn', function() {
+    it('should be able to turn left and move a step', function() {
       var mr = new MarsRover(1, 2, 'N', grid);
-      //mr.move('LMLMLMLMM');
       mr.move('LM')
       expect(mr.orientation).to.equal('W')
       expect(mr.location).to.deep.equal([0, 2]);
-      //expect(mr.orientation).to.equal('E')
-      //expect(mr.location).to.deep.equal([3, 3]);
     });
 
-    it('should be able to move and turn', function() {
+    it('should be able to move and turn left', function() {
       var mr = new MarsRover(1, 2, 'N', new Grid([5, 5]));
       //mr.move('LMLMLMLMM');
       mr.move('ML')
@@ -107,7 +104,7 @@ describe('Mars Rover', function() {
       expect(mr.location).to.deep.equal([1, 3]);
     });
 
-    it('should be able to move and turn', function() {
+    it('should be able to move and turn right', function() {
       var mr = new MarsRover(1, 2, 'N', new Grid([5, 5]));
       //mr.move('LMLMLMLMM');
       mr.move('MR')
@@ -115,7 +112,7 @@ describe('Mars Rover', function() {
       expect(mr.location).to.deep.equal([1, 3]);
     });
 
-    it('should be able to move and turn', function() {
+    it('should be able to turn right and move', function() {
       var mr = new MarsRover(1, 2, 'E', new Grid([5, 5]));
       //mr.move('LMLMLMLMM');
       mr.move('RM')
@@ -123,7 +120,7 @@ describe('Mars Rover', function() {
       expect(mr.location).to.deep.equal([1, 1]);
     });
 
-    it('should be able to move and turn', function() {
+    it('should be able to turn right, move and turn left', function() {
       var mr = new MarsRover(1, 2, 'E', new Grid([5, 5]));
       //mr.move('LMLMLMLMM');
       mr.move('RML')
@@ -131,7 +128,7 @@ describe('Mars Rover', function() {
       expect(mr.location).to.deep.equal([1, 1]);
     });
 
-    it('should be able to move and turn', function() {
+    it('should be able to turn right, move two steps and turn left', function() {
       var mr = new MarsRover(1, 2, 'E', new Grid([5, 5]));
       //mr.move('LMLMLMLMM');
       mr.move('RMML')
@@ -139,7 +136,7 @@ describe('Mars Rover', function() {
       expect(mr.location).to.deep.equal([1, 0]);
     });
 
-    it('should be able to move and turn', function() {
+    it('should be able to turn left and move one step several times', function() {
       var mr = new MarsRover(1, 2, 'N', new Grid([5, 5]));
       //mr.move('LMLMLMLMM');
       mr.move('LMLMLMLMM')
@@ -147,7 +144,7 @@ describe('Mars Rover', function() {
       expect(mr.location).to.deep.equal([1, 3]);
     });
 
-    it('should be able to move and turn', function() {
+    it('should be able to turn right', function() {
       var mr = new MarsRover(1, 2, 'W', new Grid([5, 5]));
       //mr.move('LMLMLMLMM');
       mr.move('R')
@@ -155,7 +152,7 @@ describe('Mars Rover', function() {
       expect(mr.location).to.deep.equal([1, 2]);
     });
 
-    it('should be able to move and turn', function() {
+    it('should be able to turn right, move two steps and turn left', function() {
       var mr = new MarsRover(1, 2, 'W', new Grid([5, 5]));
       //mr.move('LMLMLMLMM');
       mr.move('RMML')
@@ -163,7 +160,7 @@ describe('Mars Rover', function() {
       expect(mr.location).to.deep.equal([1, 4]);
     });
 
-    it('should be able to move and turn', function() {
+    it('should be able to take on a string of commands', function() {
       var mr = new MarsRover(1, 2, 'W', new Grid([5, 5]));
       //mr.move('LMLMLMLMM');
       mr.move('RMMLRRRMMMM')
